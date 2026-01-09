@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta para mi amor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #0b0f2a, #1a1f4d, #0b0f2a);
+            background-attachment: fixed;
+            font-family: 'Georgia', serif;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 60%);
+            pointer-events: none;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+                radial-gradient(1px 1px at 80% 40%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 50% 70%, #fff, transparent),
+                radial-gradient(1px 1px at 10% 80%, #fff, transparent),
+                radial-gradient(2px 2px at 90% 20%, #fff, transparent);
+            animation: twinkle 6s infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.4; }
+            to { opacity: 0.8; }
+        }
+
+        .letter {
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            line-height: 1.9;
+            animation: fadeIn 3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        .signature {
+            margin-top: 50px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .music {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 280px;
+            height: 158px;
+            opacity: 0.75;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        }
+
+        .music iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="overlay"></div>
+
+<!-- Música -->
+<div class="music">
+    <iframe 
+        src="https://www.youtube.com/embed/iItec_J9x7M?autoplay=1&loop=1&playlist=iItec_J9x7M"
+        allow="autoplay; encrypted-media">
+    </iframe>
+</div>
+
+<div class="letter">
+    <h1>Mi amor eterno</h1>
+
+    <p>Esta noche no es una noche cualquiera. Hay algo distinto en el aire, como si el mundo supiera que mi corazón está escribiendo tu nombre con más fuerza de lo habitual. La noche avanza despacio, respetando cada pensamiento que nace en mí cuando apareces tú, porque incluso el tiempo entiende que amarte no se puede apresurar.</p>
+
+    <p>Hoy quiero desnudar mis sentimientos con palabras, dejar que mi alma hable sin miedo, sin filtros, sin límites. Quiero que sepas todo lo que eres para mí, incluso aquello que a veces no sé cómo decir cuando te tengo cerca, porque cuando te miro, el corazón se me acelera tanto que las palabras se quedan pequeñas.</p>
+
+    <p>Desde que llegaste a mi vida, nada volvió a ser igual. Antes de ti, los días pasaban; contigo, los días se sienten. Antes de ti, el futuro era una idea borrosa; contigo, es un lugar al que quiero llegar de tu mano. Me cambiaste sin pedirme permiso, me marcaste sin darte cuenta, y me enseñaste que amar no es solo sentir bonito, sino entregarse por completo.</p>
+
+    <p>Amarte es despertar y pensar en ti incluso antes de abrir los ojos. Es sonreír solo por recordar tu voz. Es sentir un nudo dulce en el pecho cuando imagino tu ausencia y una paz infinita cuando imagino tu abrazo. Es saber que, aunque el mundo se caiga a pedazos, si estás tú, yo me quedo.</p>
+
+    <p>Tus ojos… tus ojos son mi lugar favorito. En ellos encuentro calma, deseo, hogar. Me pierdo en tu mirada como quien se pierde en algo que no quiere abandonar jamás. Y tu sonrisa… tu sonrisa tiene el poder de reconstruirme incluso en mis días más rotos. No sabes cuántas veces me ha salvado sin que lo sepas.</p>
+
+    <p>Esta noche quiero decirte que te amo con una intensidad que no se aprende, que no se finge, que no se controla. Te amo con la piel, con el pensamiento, con los recuerdos y con las promesas que aún no hemos hecho. Te amo en silencio cuando te pienso, y con locura cuando te imagino cerca.</p>
+
+    <p>Hay algo en ti que despierta lo más profundo de mí. Me provocas ternura y pasión al mismo tiempo. Me haces querer cuidarte como lo más frágil y desearte como lo más intenso. Eres ese equilibrio perfecto entre lo que calma mi alma y lo que incendia mi cuerpo.</p>
+
+    <p>Quiero que sepas que no te amo solo en los momentos fáciles. Te amo en tus dudas, en tus miedos, en tus silencios. Te amo cuando sonríes y cuando te rompes un poquito. Porque amar no es idealizar, es quedarse… y yo quiero quedarme siempre.</p>
+
+    <p>Sueño contigo más de lo que imaginas. Sueño con tus manos entrelazadas con las mías, con noches largas donde el mundo desaparece y solo quedamos tú y yo. Sueño con besarte lento, con mirarte de cerca, con decirte “te amo” sin palabras, solo con la forma en que te abrazo.</p>
+
+    <p>Si supieras cuántas veces imagino futuros contigo… mañanas tranquilas, risas espontáneas, discusiones pequeñas que terminan en abrazos más fuertes. Te imagino siendo parte de mi rutina, de mis logros, de mis caídas, de todo. Porque cuando pienso en mi vida, inevitablemente estás tú.</p>
+
+    <p>Esta carta podría seguir creciendo eternamente, porque mi amor por ti no conoce límites ni cansancio. Cada palabra nace de un sentimiento real, profundo, honesto. No es exageración, no es poesía vacía: es mi corazón hablándote sin miedo.</p>
+
+    <p>Esta noche, mientras lees esto, quiero que sientas mi presencia aunque no esté físicamente contigo. Quiero que sientas que alguien te piensa con devoción, que alguien te ama con intensidad, que alguien te elige incluso cuando no está obligado a hacerlo.</p>
+
+    <p>Y si alguna vez dudas, vuelve a esta carta. Aquí está la prueba de que mi amor por ti es real, profundo y constante. Aquí está mi promesa silenciosa de seguir amándote incluso cuando las palabras ya no alcancen.</p>
+
+    <p>Porque tú no eres un capítulo más de mi historia…<br>
+    tú eres el libro entero.</p>
+
+    <div class="signature">
+        <p>Con todo mi corazón,<br>
+        con toda mi alma,<br>
+        con todo mi amor infinito…</p>
+        <p><strong>Te amo.</strong></p>
+    </div>
+</div>
+
+</body>
+</html>
