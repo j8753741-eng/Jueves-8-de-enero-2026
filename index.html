@@ -25,7 +25,6 @@ body::before {
     z-index: -1;
 }
 
-/* Título */
 .titulo {
     margin-top: 70px;
     text-align: center;
@@ -35,7 +34,6 @@ body::before {
     letter-spacing: 2px;
 }
 
-/* Carta */
 .carta {
     max-width: 900px;
     margin: 50px auto 140px;
@@ -51,7 +49,6 @@ body::before {
     margin-bottom: 28px;
 }
 
-/* Botones */
 .btn {
     position: fixed;
     padding: 12px 24px;
@@ -63,7 +60,6 @@ body::before {
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Música */
 #musicBtn {
     bottom: 20px;
     right: 20px;
@@ -71,7 +67,6 @@ body::before {
     color: white;
 }
 
-/* Sorpresa */
 #surpriseBtn {
     bottom: 70px;
     right: 20px;
@@ -79,7 +74,6 @@ body::before {
     color: white;
 }
 
-/* Mensaje sorpresa */
 #surpriseMsg {
     display: none;
     margin-top: 40px;
@@ -101,6 +95,7 @@ body::before {
 <button id="musicBtn" class="btn" onclick="toggleMusic()">🎵 Reproducir música</button>
 <button id="surpriseBtn" class="btn" onclick="showSurprise()">💖 Sorpresa</button>
 
+<!-- reproductor oculto -->
 <div id="player"></div>
 
 <div class="carta">
@@ -154,14 +149,15 @@ let isPlaying = false;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '0',
-        width: '0',
         videoId: 'qt4wcJVIZFQ',
+        width: '0',
+        height: '0',
         playerVars: {
             autoplay: 0,
             controls: 0,
             loop: 1,
-            playlist: 'qt4wcJVIZFQ'
+            playlist: 'qt4wcJVIZFQ',
+            playsinline: 1
         }
     });
 }
