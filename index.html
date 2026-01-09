@@ -5,116 +5,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Ti ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    font-family: 'Georgia', serif;
-    background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
-    color: #ffffff;
-    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    color: #2c2c2c;
 }
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 70%);
     z-index: -1;
 }
 
-/* Carta */
 .carta {
     max-width: 900px;
-    margin: 80px auto;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.45);
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(255,255,255,0.08);
-    line-height: 1.9;
+    margin: 80px auto 120px;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    line-height: 2;
     font-size: 18px;
 }
 
-/* Botón música */
-#musicBtn {
+.carta p {
+    margin-bottom: 26px;
+}
+
+/* Botones */
+.btn {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 14px 22px;
-    border-radius: 30px;
+    padding: 12px 22px;
+    border-radius: 40px;
     border: none;
-    font-size: 16px;
-    background: linear-gradient(135deg, #6a5acd, #836fff);
-    color: white;
+    font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(106,90,205,0.6);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
     z-index: 999;
+}
+
+#musicBtn {
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    color: #2c5364;
+}
+
+#surpriseBtn {
+    bottom: 70px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+}
+
+/* Mensaje sorpresa */
+#surpriseMsg {
+    display: none;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: #4a1c2a;
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 </style>
 </head>
 
 <body>
 
-<!-- BOTÓN DE MÚSICA -->
-<button id="musicBtn" onclick="toggleMusic()">🎵 Reproducir música</button>
+<button id="musicBtn" class="btn" onclick="toggleMusic()">🎵 Reproducir música</button>
+<button id="surpriseBtn" class="btn" onclick="showSurprise()">💖 Sorpresa</button>
 
-<!-- REPRODUCTOR YOUTUBE OCULTO -->
 <div id="player"></div>
 
-<!-- CARTA -->
-<div class="container">
-<div class="letter">
+<div class="carta">
 
-<h1>Mi amor eterno</h1>
+<p>
+Esta noche, mientras el mundo parece ir más lento y el silencio se siente distinto, quiero que leas estas palabras con calma, como si cada una fuera un latido mío buscándote. No es una carta cualquiera, es un pedazo de mi alma que decidió quedarse contigo.
+</p>
 
-<p>Esta noche no es una noche cualquiera. Hay algo distinto en el aire, como si el mundo supiera que mi corazón está escribiendo tu nombre con más fuerza de lo habitual. La noche avanza despacio, respetando cada pensamiento que nace en mí cuando apareces tú, porque incluso el tiempo entiende que amarte no se puede apresurar.</p>
+<p>
+Amarte no fue una decisión, fue un descubrimiento. Como cuando encuentras algo que siempre estuvo ahí, esperándote, y de repente todo tiene sentido. Desde que llegaste a mi vida, entendí que el amor no es ruido, es profundidad; no es prisa, es permanencia.
+</p>
 
-<p>Hoy quiero desnudar mis sentimientos con palabras, dejar que mi alma hable sin miedo, sin filtros, sin límites. Quiero que sepas todo lo que eres para mí, incluso aquello que a veces no sé cómo decir cuando te tengo cerca, porque cuando te miro, el corazón se me acelera tanto que las palabras se quedan pequeñas.</p>
+<p>
+Pienso en ti y siento paz, pero también fuego. Siento hogar y aventura al mismo tiempo. Eres ese pensamiento que aparece sin avisar y se queda, ese recuerdo que no quiero soltar, esa presencia que incluso en la distancia se siente cerca.
+</p>
 
-<p>Desde que llegaste a mi vida, nada volvió a ser igual. Antes de ti, los días pasaban; contigo, los días se sienten. Antes de ti, el futuro era una idea borrosa; contigo, es un lugar al que quiero llegar de tu mano. Me cambiaste sin pedirme permiso, me marcaste sin darte cuenta, y me enseñaste que amar no es solo sentir bonito, sino entregarse por completo.</p>
+<p>
+Esta noche quiero confesarte que te amo de una forma que no sabía que existía. Te amo en lo simple y en lo eterno, en los días buenos y en los que cuestan. Te amo en silencio y cuando el corazón quiere gritarlo todo.
+</p>
 
-<p>Amarte es despertar y pensar en ti incluso antes de abrir los ojos. Es sonreír solo por recordar tu voz. Es sentir un nudo dulce en el pecho cuando imagino tu ausencia y una paz infinita cuando imagino tu abrazo. Es saber que, aunque el mundo se caiga a pedazos, si estás tú, yo me quedo.</p>
+<p>
+Si supieras cuántas veces sonrío solo por imaginarte leyendo esto… cuántas veces le agradezco a la vida por haberte puesto en mi camino. Porque desde que estás, todo tiene un color distinto, una intención más bonita.
+</p>
 
-<p>Tus ojos… tus ojos son mi lugar favorito. En ellos encuentro calma, deseo, hogar. Me pierdo en tu mirada como quien se pierde en algo que no quiere abandonar jamás. Y tu sonrisa… tu sonrisa tiene el poder de reconstruirme incluso en mis días más rotos. No sabes cuántas veces me ha salvado sin que lo sepas.</p>
+<p>
+No prometo perfección, pero sí verdad. No prometo caminos fáciles, pero sí caminar contigo. Y si alguna vez dudas, recuerda esto: mi amor por ti no depende del momento, vive en mí.
+</p>
 
-<p>Esta noche quiero decirte que te amo con una intensidad que no se aprende, que no se finge, que no se controla. Te amo con la piel, con el pensamiento, con los recuerdos y con las promesas que aún no hemos hecho. Te amo en silencio cuando te pienso, y con locura cuando te imagino cerca.</p>
+<p>
+Esta carta no busca un final, porque lo nuestro no lo tiene. Es solo una pausa para mirarte con el corazón en las manos y decirte, una vez más, que te elijo hoy, mañana y en todas las noches como esta.
+</p>
 
-<p>Hay algo en ti que despierta lo más profundo de mí. Me provocas ternura y pasión al mismo tiempo. Me haces querer cuidarte como lo más frágil y desearte como lo más intenso. Eres ese equilibrio perfecto entre lo que calma mi alma y lo que incendia mi cuerpo.</p>
+<p>
+Con todo lo que soy y todo lo que siento,  
+para ti.
+</p>
 
-<p>Quiero que sepas que no te amo solo en los momentos fáciles. Te amo en tus dudas, en tus miedos, en tus silencios. Te amo cuando sonríes y cuando te rompes un poquito. Porque amar no es idealizar, es quedarse… y yo quiero quedarme siempre.</p>
-
-<p>Sueño contigo más de lo que imaginas. Sueño con tus manos entrelazadas con las mías, con noches largas donde el mundo desaparece y solo quedamos tú y yo. Sueño con besarte lento, con mirarte de cerca, con decirte “te amo” sin palabras, solo con la forma en que te abrazo.</p>
-
-<p>Si supieras cuántas veces imagino futuros contigo… mañanas tranquilas, risas espontáneas, discusiones pequeñas que terminan en abrazos más fuertes. Te imagino siendo parte de mi rutina, de mis logros, de mis caídas, de todo. Porque cuando pienso en mi vida, inevitablemente estás tú.</p>
-
-<p>Esta carta podría seguir creciendo eternamente, porque mi amor por ti no conoce límites ni cansancio. Cada palabra nace de un sentimiento real, profundo, honesto. No es exageración, no es poesía vacía: es mi corazón hablándote sin miedo.</p>
-
-<p>Esta noche, mientras lees esto, quiero que sientas mi presencia aunque no esté físicamente contigo. Quiero que sientas que alguien te piensa con devoción, que alguien te ama con intensidad, que alguien te elige incluso cuando no está obligado a hacerlo.</p>
-
-<p>Y si alguna vez dudas, vuelve a esta carta. Aquí está la prueba de que mi amor por ti es real, profundo y constante. Aquí está mi promesa silenciosa de seguir amándote incluso cuando las palabras ya no alcancen.</p>
-
-<p>Porque tú no eres un capítulo más de mi historia…<br>
-tú eres el libro entero.</p>
-
-<div class="signature">
-<p>Con todo mi corazón,<br>
-con toda mi alma,<br>
-con todo mi amor infinito…</p>
-<p><strong>Te amo.</strong></p>
-</div>
-
-<button class="surprise-btn" onclick="mostrarSorpresa()">Sorpresa</button>
-
-<div class="surprise-message" id="sorpresa">
-<p>Antes de cerrar esta carta…</p>
-<p>Ve a revisar mi <strong>foto de perfil de WhatsApp</strong>.</p>
-<p>Ahí hay algo oculto solo para ti ✨</p>
-<p>Cuando lo encuentres… <strong>dímelo</strong>.</p>
+<div id="surpriseMsg">
+💌 <strong>Ahora ve a mi foto de perfil en WhatsApp.</strong><br><br>
+Ahí hay algo oculto que preparé solo para ti.<br>
+Cuando lo encuentres… escríbeme 💬❤️
 </div>
 
 </div>
-<!-- API DE YOUTUBE -->
+
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
@@ -146,6 +163,11 @@ function toggleMusic() {
         btn.textContent = "🎵 Reproducir música";
         isPlaying = false;
     }
+}
+
+function showSurprise() {
+    document.getElementById("surpriseMsg").style.display = "block";
+    document.getElementById("surpriseBtn").style.display = "none";
 }
 </script>
 
