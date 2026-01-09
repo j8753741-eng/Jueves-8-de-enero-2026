@@ -2,121 +2,67 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Carta para mi amor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
 
 <style>
 html, body {
     margin: 0;
     padding: 0;
-}
-
-body {
-    background: linear-gradient(180deg, #050814, #0c1230, #050814);
+    min-height: 100%;
     font-family: 'Georgia', serif;
-    color: #f5f5f5;
+    background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* Contenedor */
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 80px 20px;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+    z-index: -1;
 }
 
 /* Carta */
-.letter {
+.carta {
     max-width: 900px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 60px;
+    margin: 80px auto;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.45);
     border-radius: 20px;
-    box-shadow: 0 0 35px rgba(0,0,0,0.8);
+    box-shadow: 0 0 40px rgba(255,255,255,0.08);
     line-height: 1.9;
-    animation: fadeIn 2s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h1 {
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-}
-
-p {
-    margin-bottom: 22px;
-    text-align: justify;
-}
-
-.signature {
-    margin-top: 50px;
-    text-align: right;
-    font-style: italic;
-}
-
-/* Botón sorpresa */
-.surprise-btn {
-    display: block;
-    margin: 50px auto 0;
-    padding: 14px 40px;
     font-size: 18px;
-    background: linear-gradient(135deg, #ff4d6d, #ff758f);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255,77,109,0.6);
-    transition: transform 0.3s;
 }
 
-.surprise-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Mensaje sorpresa */
-.surprise-message {
-    display: none;
-    margin-top: 30px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* Música */
-.music {
+/* Botón música */
+#musicBtn {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 280px;
-    height: 158px;
-    opacity: 0.7;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
-}
-
-.music iframe {
-    width: 100%;
-    height: 100%;
+    bottom: 20px;
+    left: 20px;
+    padding: 14px 22px;
+    border-radius: 30px;
     border: none;
+    font-size: 16px;
+    background: linear-gradient(135deg, #6a5acd, #836fff);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(106,90,205,0.6);
+    z-index: 999;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Música -->
-<div class="music">
-    <iframe 
-        src="https://www.youtube.com/embed/iItec_J9x7M?autoplay=1&loop=1&playlist=iItec_J9x7M"
-        allow="autoplay; encrypted-media">
-    </iframe>
-</div>
+<!-- BOTÓN DE MÚSICA -->
+<button id="musicBtn" onclick="toggleMusic()">🎵 Reproducir música</button>
 
+<!-- REPRODUCTOR YOUTUBE OCULTO -->
+<div id="player"></div>
+
+<!-- CARTA -->
 <div class="container">
 <div class="letter">
 
@@ -168,11 +114,38 @@ con todo mi amor infinito…</p>
 </div>
 
 </div>
-</div>
+<!-- API DE YOUTUBE -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-function mostrarSorpresa() {
-    document.getElementById("sorpresa").style.display = "block";
+let player;
+let isPlaying = false;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        videoId: 'qt4wcJVIZFQ',
+        playerVars: {
+            autoplay: 0,
+            controls: 0,
+            loop: 1,
+            playlist: 'qt4wcJVIZFQ'
+        }
+    });
+}
+
+function toggleMusic() {
+    const btn = document.getElementById("musicBtn");
+    if (!isPlaying) {
+        player.playVideo();
+        btn.textContent = "⏸ Pausar música";
+        isPlaying = true;
+    } else {
+        player.pauseVideo();
+        btn.textContent = "🎵 Reproducir música";
+        isPlaying = false;
+    }
 }
 </script>
 
